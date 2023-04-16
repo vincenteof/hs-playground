@@ -1,4 +1,4 @@
-module Solution121 where
+module Solution121 (maxProfit) where
 
 -- https://leetcode.cn/problems/best-time-to-buy-and-sell-stock
 

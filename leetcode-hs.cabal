@@ -33,7 +33,7 @@ executable leetcode-hs
 
 library leetcode-core
     import:           common-settings
-    exposed-modules:  LeetCode, Solution121
+    exposed-modules:  LeetCode, Solution121, Solution4
     hs-source-dirs:   src
 
 test-suite leetcode-tests
