@@ -38,10 +38,11 @@ library leetcode-core
 
 test-suite leetcode-tests
     type: exitcode-stdio-1.0
-    main-is: Test.hs
+    main-is: Spec.hs
+    other-modules:  Solution4Spec, Solution121Spec
     hs-source-dirs: test
     build-depends:
         base ^>=4.14.3.0,
-        HUnit ^>=1.6,
+        hspec >= 2.7,
         leetcode-core
     
