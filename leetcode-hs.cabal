@@ -33,13 +33,13 @@ executable leetcode-hs
 
 library leetcode-core
     import:           common-settings
-    exposed-modules:  LeetCode, Solution121, Solution4
+    exposed-modules:  LeetCode, Solution4, Solution121, Solution215
     hs-source-dirs:   src
 
 test-suite leetcode-tests
     type: exitcode-stdio-1.0
     main-is: Spec.hs
-    other-modules:  Solution4Spec, Solution121Spec
+    other-modules:  Solution4Spec, Solution121Spec, Solution215Spec
     hs-source-dirs: test
     build-depends:
         base ^>=4.14.3.0,
