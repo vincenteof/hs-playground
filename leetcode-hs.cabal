@@ -28,12 +28,11 @@ common common-settings
 executable leetcode-hs
     import:           common-settings
     main-is:          Main.hs
-    other-modules:    LeetCode
     hs-source-dirs:   app, src
 
 library leetcode-core
     import:           common-settings
-    exposed-modules:  LeetCode, Solution4, Solution121, Solution215
+    exposed-modules:  Solution4, Solution121, Solution215
     hs-source-dirs:   src
 
 test-suite leetcode-tests
