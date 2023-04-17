@@ -17,6 +17,7 @@ helper k (x : xs)
     right = filter (> x) xs
     rightLength = length right
 
+-- case1
 -- 3,2,1,5,6,4
 -- k=2
 -- p 3
@@ -29,6 +30,7 @@ helper k (x : xs)
 -- 1
 -- []
 
+-- case2
 -- 3,2,3,1,2,4,5,5,6
 -- k=4
 -- p 3
