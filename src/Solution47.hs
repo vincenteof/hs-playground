@@ -1,33 +1,44 @@
-module Solution47 (permuteUnique) where
-import qualified Data.Set as Set
-import Data.List (sort,nub)
-
--- https://leetcode.cn/problems/permutations-ii/
-
--- permuteUnique :: [Int] -> [[Int]]
--- permuteUnique = permuteUniqueSorted . sort
-
--- permuteUniqueSorted :: [Int] -> [[Int]]
--- permuteUniqueSorted original = go original Set.empty 
---     where 
---         go :: [Int] -> Set.Set Int -> [[Int]]
---         go [] _ = [[]]
---         go (x:xs) visited 
---             | Set.member x visited = go xs visited
---             | otherwise = 
---                 let ys = permuteUniqueSorted $ removeOne x original
---                 in map (++ [x]) ys
-        
-removeOne :: Int -> [Int] -> [Int]
-removeOne _ [] = []
-removeOne x (y : ys) = if x == y then ys else y : removeOne x ys
+module Solution47 (permuteUnique, permuteUnique') where
+import Data.List (nub, sort)
 
 permuteUnique :: [Int] -> [[Int]]
-permuteUnique [] = [[]]
-permuteUnique xs = [x : ys | x <- nub xs, ys <- permuteUnique $ removeOne x xs]
+permuteUnique = go . sort
+  where
+    go :: [Int] -> [[Int]]
+    go [] = [[]]
+    go xs = do
+      x <- uniques xs
+      let remaining = go $ removeOne x xs
+      map (x :) remaining
 
--- 1,1,2
+uniques :: [Int] -> [Int]
+uniques [] = []
+uniques [x] = [x]
+uniques (x : xs) = go x xs [x]
+  where
+    go :: Int -> [Int] -> [Int] -> [Int]
+    go _ [] acc = reverse acc
+    go prev (y : ys) acc
+      | prev == y = go prev ys acc
+      | otherwise = go y ys (y : acc)      
 
+removeOne :: Eq a => a -> [a] -> [a]
+removeOne _ [] = []
+removeOne x (y : ys)
+  | x == y = ys
+  | otherwise = y : removeOne x ys
+
+
+-- `nub` is inefficient and we will use it many times make the problem even worse.
+-- suppose the list is sorted, find unique elements will be able in linear time complexity.
+permuteUnique' :: [Int] -> [[Int]]
+permuteUnique' [] = [[]]
+permuteUnique' xs = [x : ys | x <- nub xs, ys <- permuteUnique' $ removeOne x xs]
+
+
+
+-- case 1,1,2
+-- xs 1,1,2
 
 -- some related topics:
 -- https://www.fpcomplete.com/haskell/library/containers/
