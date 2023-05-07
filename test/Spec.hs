@@ -2,6 +2,7 @@ import Test.Hspec
 import qualified Solution4Spec
 import qualified Solution17Spec
 import qualified Solution22Spec
+import qualified Solution39Spec
 import qualified Solution46Spec
 import qualified Solution47Spec
 import qualified Solution94Spec
@@ -16,6 +17,7 @@ main = hspec $ do
   describe "solution4" Solution4Spec.spec
   describe "solution17" Solution17Spec.spec
   describe "solution22" Solution22Spec.spec
+  describe "solution39" Solution39Spec.spec
   describe "solution46" Solution46Spec.spec
   describe "solution47" Solution47Spec.spec
   describe "solution94" Solution94Spec.spec
