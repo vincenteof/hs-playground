@@ -39,3 +39,5 @@ exist board target = or [go (i, j) target (emptyBoard m n) | i <- [0 .. m-1], j 
       | get pos board /= cur = False
       | get pos visited = False
       | otherwise = or [go newPos rest (visitCell visited pos) | newPos <- choice pos m n]
+
+-- maybe I could speed it up using dp
