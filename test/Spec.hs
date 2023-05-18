@@ -8,6 +8,7 @@ import qualified Solution47Spec
 import qualified Solution79Spec
 import qualified Solution94Spec
 import qualified Solution121Spec
+import qualified Solution131Spec
 import qualified Solution215Spec
 import qualified Solution784Spec
 
@@ -24,6 +25,7 @@ main = hspec $ do
   describe "solution79" Solution79Spec.spec
   describe "solution94" Solution94Spec.spec
   describe "solution121" Solution121Spec.spec
+  describe "solution131" Solution131Spec.spec
   describe "solution215" Solution215Spec.spec
   describe "solution784" Solution784Spec.spec
 
