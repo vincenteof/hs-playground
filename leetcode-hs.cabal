@@ -61,7 +61,12 @@ library leetcode-core
 test-suite leetcode-tests
   type:           exitcode-stdio-1.0
   main-is:        Spec.hs
+
+  -- cabal-fmt: expand test
+  --
   other-modules:
+    DynamicProgramming.Solution118Spec
+    DynamicProgramming.Solution70Spec
     Solution121Spec
     Solution131Spec
     Solution17Spec
@@ -71,7 +76,6 @@ test-suite leetcode-tests
     Solution46Spec
     Solution47Spec
     Solution4Spec
-    Solution70Spec
     Solution784Spec
     Solution79Spec
     Solution94Spec

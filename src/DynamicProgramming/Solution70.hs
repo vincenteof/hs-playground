@@ -10,4 +10,4 @@ climbStairs  n = climbStairsMemo !! n
         climbStairs' 0 = 0
         climbStairs' 1 = 1
         climbStairs' 2 = 2
-        climbStairs' i = climbStairs' (i - 1) + climbStairs' (i - 2)
+        climbStairs' i = climbStairsMemo !! (i - 1) + climbStairsMemo !! (i - 2)
