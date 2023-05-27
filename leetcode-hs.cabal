@@ -40,6 +40,9 @@ library leetcode-core
   --
   exposed-modules:
     DynamicProgramming.Solution118
+    DynamicProgramming.Solution198
+    DynamicProgramming.Solution279
+    DynamicProgramming.Solution322
     DynamicProgramming.Solution70
     Solution121
     Solution131
@@ -66,6 +69,7 @@ test-suite leetcode-tests
   --
   other-modules:
     DynamicProgramming.Solution118Spec
+    DynamicProgramming.Solution198Spec
     DynamicProgramming.Solution70Spec
     Solution121Spec
     Solution131Spec
