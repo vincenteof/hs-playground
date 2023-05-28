@@ -5,7 +5,7 @@ import Test.Hspec
 
 spec :: Spec
 spec = do
-  describe "generate" $ do
+  describe "rob" $ do
     it "handles empty input" $ rob [] `shouldBe` 0
     it "handles single element" $ rob [1] `shouldBe` 1
     it "handles two elements" $ rob [1, 2]`shouldBe` 2

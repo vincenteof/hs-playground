@@ -14,6 +14,8 @@ import qualified Solution784Spec
 import qualified DynamicProgramming.Solution70Spec
 import qualified DynamicProgramming.Solution118Spec
 import qualified DynamicProgramming.Solution198Spec
+import qualified DynamicProgramming.Solution279Spec
+
 
 
 
@@ -35,6 +37,7 @@ main = hspec $ do
   describe "solution121" Solution121Spec.spec
   describe "solution131" Solution131Spec.spec
   describe "solution215" Solution215Spec.spec
+  describe "solution279" DynamicProgramming.Solution279Spec.spec
   describe "solution784" Solution784Spec.spec
 
 
