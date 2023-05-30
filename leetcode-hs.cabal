@@ -71,6 +71,7 @@ test-suite leetcode-tests
     DynamicProgramming.Solution118Spec
     DynamicProgramming.Solution198Spec
     DynamicProgramming.Solution279Spec
+    DynamicProgramming.Solution322Spec
     DynamicProgramming.Solution70Spec
     Solution121Spec
     Solution131Spec
