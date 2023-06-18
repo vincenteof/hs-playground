@@ -1,4 +1,4 @@
-# LeetCode-In-Haskell
+# leetcode-hs
 
 LeetCode sometimes is boring, maybe we can combine it with Haskell?
 
