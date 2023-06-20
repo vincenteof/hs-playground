@@ -24,6 +24,7 @@ common common-settings
   build-depends:
     , base        >=4.14.3.0 && <4.17
     , containers
+    , array
 
   default-language: Haskell2010
   ghc-options:      -Wall
@@ -43,6 +44,7 @@ library leetcode-core
     DynamicProgramming.Solution198
     DynamicProgramming.Solution279
     DynamicProgramming.Solution322
+    DynamicProgramming.Solution300
     DynamicProgramming.Solution70
     Solution121
     Solution131
@@ -71,6 +73,7 @@ test-suite leetcode-tests
     DynamicProgramming.Solution118Spec
     DynamicProgramming.Solution198Spec
     DynamicProgramming.Solution279Spec
+    DynamicProgramming.Solution300Spec
     DynamicProgramming.Solution322Spec
     DynamicProgramming.Solution70Spec
     Solution121Spec

@@ -1,5 +1,4 @@
 module DynamicProgramming.Solution118Spec where
-
 import DynamicProgramming.Solution118 (generate)
 import Test.Hspec
 
