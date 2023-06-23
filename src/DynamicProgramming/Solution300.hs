@@ -12,11 +12,10 @@ lengthOfLIS xs = cache ! (len - 1)
     cache = listArray (0, len - 1) [calc i | i <- [0 .. len - 1]]
     calc :: Int -> Int
     calc 0 = 1
-    calc i =
-      let targets = [cache ! j | j <- [0 .. i - 1], arr ! j < arr ! i]
-       in if null targets
-            then 1
-            else maximum targets + 1
+    calc i
+      | null targets = 1
+      | otherwise    = maximum targets + 1
+        where targets = [cache ! j | j <- [0 .. i - 1], arr ! j < arr ! i]
             
 -- [10,9,2,5,3,7,101,18]
 -- [1,1,1,2,2,3,4,4]
